@@ -41,9 +41,8 @@ step1_update() {
 }
 
 step2_timezone() {
-    echo -e "${YELLOW}[2/8] 正在设置时区为 Asia/Shanghai 并开启 NTP...${NC}"
+    echo -e "${YELLOW}[2/8] 正在设置时区为 Asia/Shanghai...${NC}"
     timedatectl set-timezone Asia/Shanghai
-    timedatectl set-ntp true
     echo -e "${GREEN}✔ 时区设置完成${NC}"
 }
 
@@ -169,7 +168,7 @@ show_menu() {
     echo -e "${CYAN}======================================${NC}"
     echo ""
     echo -e "  ${GREEN}1${NC})  系统更新与清理"
-    echo -e "  ${GREEN}2${NC})  时区设为 Asia/Shanghai + NTP"
+    echo -e "  ${GREEN}2${NC})  时区设为 Asia/Shanghai"
     echo -e "  ${GREEN}3${NC})  DNS 优化 (1.1.1.1 / 8.8.8.8)"
     echo -e "  ${GREEN}4${NC})  开启 BBR 网络加速"
     echo -e "  ${GREEN}5${NC})  配置 2G Swap 虚拟内存"
